@@ -12,6 +12,7 @@
 
 // router.get("/getUsersData", UserController.getUsersData)
 
+
 // router.post("/createBook", BookController.createBook  )
 
 // router.get("/getBooksData", BookController.getBooksData)
@@ -23,30 +24,74 @@
 //-----------------------------------------> MONGODB ASSIGNMENT 2  <----------------------------------------------------
 
 
+// const express = require('express');
+// const router = express.Router();
+
+// const bookModel= require("../models/bookModel.js")
+// const bookController= require("../controllers/bookController.js")
+
+
+// router.post("/createBooks", bookController.createBooks)
+
+// router.get("/bookList", bookController.bookList)
+
+// router.post("/getBooksInYear", bookController. getBooksInYear)
+
+// router.post("/getParticularBooks", bookController.getParticularBooks)
+
+// router.get("/getXINRBooks", bookController.getXINRBooks)
+
+// router.get("/getRandomBooks", bookController.getRandomBooks)
+
+
+
+// module.exports= router;
+
+
+
+//-----------------------------------------> MONGODB ASSIGNMENT 3  <----------------------------------------------------
+
+// const express = require('express');
+// const router = express.Router();
+
+
+// const BookSchema= require("../models/bookSchema.js")  
+// const Book_authorController= require("../controllers/book_authorController.js")
+
+
+// router.post("/createAuthor", Book_authorController.createAuthor)
+
+// router.post("/createBook", Book_authorController.createBook)
+
+
+// router.get("/getBooksbyChetanBhagat", Book_authorController.getBooksbyChetanBhagat)
+
+// router.get("/authorofBook", Book_authorController.authorofBook)
+
+ 
+
+
+// module.exports= router;
+
+
+//-----------------------------------------> MONGODB ASSIGNMENT 3  <----------------------------------------------------
+
 const express = require('express');
 const router = express.Router();
 
-const bookModel= require("../models/bookModel.js")
-const bookController= require("../controllers/bookController.js")
+
+const allController= require("../controllers/allController")
 
 
-router.post("/createBooks", bookController.createBooks)
+router.post("/createBook", allController.createBook  )
 
-router.get("/bookList", bookController.bookList)
+router.post("/createAuthor", allController.createAuthor)
 
-router.post("/getBooksInYear", bookController. getBooksInYear)
+router.get("/allBooks", allController.allBooks)
 
-router.post("/getParticularBooks", bookController.getParticularBooks)
+router.get("/updateBookPrice", allController.updateBookPrice)
 
-router.get("/getXINRBooks", bookController.getXINRBooks)
-
-router.get("/getRandomBooks", bookController.getRandomBooks)
+router.get("/authorsName", allController.authorsName)
 
 
-
-module.exports= router;
-
-
-
-
-
+module.exports = router; 
